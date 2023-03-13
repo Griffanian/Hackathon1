@@ -1,0 +1,274 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Poppins:wght@600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    transition: all .3s ease;
+}
+
+body {
+    font: 18px/135% 'Lato', sans-serif;
+}
+
+body::before {
+    content: "";
+    display: block;
+    height: 8px;
+    width: 100%;
+    background: #57C7F8;
+    background: linear-gradient(90deg, #8A1A1A 0%, #57C7F8 100%);
+}
+
+body > svg {
+    display: none;
+}
+
+h1, h2, h3, h4, nav, .btn {
+    font-family: 'Poppins', sans-serif;;
+}
+
+a {
+    text-decoration: none;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5em;
+}
+
+header > div:last-of-type {
+    display: flex;
+    align-items: center;
+}
+
+.logoHolder a {
+    display: inline-block;
+    width: 180px;
+}
+
+.logoHolder a:hover,
+.logoHolder a:focus,
+.logoHolder a:active {
+    opacity: .65;
+}
+
+nav ul {
+    list-style: none;
+}
+
+nav li {
+    font-weight: 600;
+    display: inline-block;
+}
+
+nav a {
+    color: #000;
+    padding: .35em 1.15em;
+}
+
+nav a:hover,
+nav a:focus,
+nav a:active {
+    color: #5BBCE9;
+}
+
+nav li:last-of-type a,
+.btn {
+    background: #5BBCE9;
+    border-radius: 15px;
+    color: #fff;
+}
+
+nav li:last-of-type a {
+    margin-right: 2em;
+}
+
+nav li:last-of-type a:hover,
+nav li:last-of-type a:focus,
+nav li:last-of-type a:active {
+    background: #000;
+}
+
+.profileHolder a {
+    color: #555;
+    display: flex;
+    align-items: center;
+}
+
+.profileHolder a img {
+    background: url("imgs/user.jpg");
+    background-size: cover;
+    display: block;
+    height: 52px;
+    width: 52px;
+    border-radius: 50%;
+    margin-left: .75em;
+}
+
+.profileHolder a span {
+    display: block;
+}
+
+.profileHolder a:hover,
+.profileHolder a:focus,
+.profileHolder a:active {
+    opacity: .75;
+}
+
+.holder {
+    margin: 0 auto;
+    max-width: 1320px;
+}
+
+.promoItem {
+    background: url("imgs/promo1.jpg") 50% 50% no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    height: 500px;
+}
+
+.promoItem h4 {
+    margin-top: .5em;
+}
+
+.promoItem p {
+    margin-top: 1em;
+}
+
+.promoItem p a {
+    margin-top: .5em;
+    display: inline-block;
+}
+
+.promoItemContent {
+    background: rgba(0,0,0,.5);
+    color: #fff;
+    padding: 2em;
+    text-align: center;
+    width: 100%;
+}
+
+.promoItemContent > * {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 720px;
+}
+
+.promoItemContent > div {
+    margin: 0 auto 2em;
+    background: #3F6DB1;
+    padding: 1em;
+    width: content-box;
+}
+
+.btn {
+    padding: .35em 1.15em;
+    font-weight: bold;
+}
+
+.btn:hover,
+.btn:focus,
+.btn:active {
+    background: #000;
+}
+
+.events {
+    margin-top: 3em;
+}
+
+.events h1 {
+    text-align: center;
+}
+
+.eventsItem {
+    border: 2px solid #C8E9F9;
+    border-radius: 15px;
+    margin-top: 2em;
+}
+
+.eventsItem h2 a {
+    color: #000;
+}
+
+.eventsItemHeader {
+    padding: 2em;
+}
+
+.eventsItemHeader h4 {
+    margin-top: .5em;
+}
+
+.eventsItem > div:nth-last-of-type(odd) {
+    background: #C8E9F9;
+    padding: 1em 2em;
+    color: #3F6DB1;
+}
+
+.eventsItemDate {
+    display: flex;
+    justify-content: space-between;
+}
+
+.eventsItemDate p {
+    width: auto;
+}
+
+.eventsItemDetails {
+    display: flex;
+    justify-content: space-between;
+    gap: 2em;
+    padding: 2em;
+}
+
+.eventsItemDetails div {
+    width: 50%;
+}
+
+.eventsItemDetails img {
+    max-width: 100%;
+}
+
+.eventsItemDetails p:not(:last-of-type) {
+    margin-bottom: 1em;
+}
+
+.eventsItemUsers {
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.eventsItemUsers > div:first-of-type {
+    display: flex;
+    gap: 1em
+}
+
+.eventsItemUsers img {
+    border-radius: 50%;
+    max-width: 100px;
+}
+
+footer {
+    background: #57C7F8;
+    background: linear-gradient(90deg, #8A1A1A 0%, #57C7F8 100%);
+    color: #fff;
+    margin-top: 3em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2em;
+}
+
+footer .logoHolder svg {
+    fill: #fff;
+}
+
+footer nav a {
+    color: #fff;
+}
