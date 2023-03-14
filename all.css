@@ -24,6 +24,10 @@ body > svg {
     display: none;
 }
 
+button {
+    border: none;
+}
+
 h1, h2, h3, h4, nav, .btn {
     font-family: 'Poppins', sans-serif;;
 }
@@ -176,11 +180,13 @@ nav li:last-of-type a:active {
     background: #000;
 }
 
-.events {
+.events,
+.people {
     margin-top: 3em;
 }
 
-.events h1 {
+.events h1,
+.people h1 {
     text-align: center;
     font-size: 4em;
 }
@@ -283,3 +289,59 @@ footer .logoHolder svg {
 footer nav a {
     color: #fff;
 }
+
+.hidden {
+    display: none;
+}
+
+.modal {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0,0,0,.7);
+    top: 0;
+}
+
+.modal p {
+    margin-top: 1em;
+}
+
+.modal div {
+    background: #fff;
+    color: #000;
+    border-radius: 1em;
+    max-width: 500px;
+    margin: 2em auto;
+    text-align: center;
+    padding: 2em
+}
+
+.modal div#close {
+    background: url("imgs/close.svg");
+    display: block;
+    cursor: pointer;
+    width: 24px;
+    height: 24px;
+    padding: 0;
+    position: absolute;
+    margin-top: -.5em;
+}
+
+.modal form {
+    margin-top: 1em;
+}
+
+input, textarea {
+    border: 1px solid #C8E9F9;
+    border-radius: 15px;
+    padding: 1em;
+    display: block;
+    width: 100%;
+    margin-bottom: .5em;
+}
+
+button[type="submit"] {
+    font-size: 1.15em;
+    margin-top: .5em;
+}
+
