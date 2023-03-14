@@ -182,6 +182,7 @@ nav li:last-of-type a:active {
 
 .events h1 {
     text-align: center;
+    font-size: 4em;
 }
 
 .eventsItem {
@@ -216,24 +217,24 @@ nav li:last-of-type a:active {
 .eventsItemDate p {
     width: auto;
 }
-
-.eventsItemDetails {
+.eventsItem span {
+    margin-left: 20px;
+}
+.eventsItemDetails > div {
     display: flex;
     justify-content: space-between;
-    gap: 2em;
     padding: 2em;
+    padding-bottom: 1.5em;
 }
-
-.eventsItemDetails div {
-    width: 50%;
+.eventsItemDetails > h4 {
+    margin-left: 36px;
 }
-
-.eventsItemDetails img {
-    max-width: 100%;
-}
-
-.eventsItemDetails p:not(:last-of-type) {
-    margin-bottom: 1em;
+.eventsItemDetails img{
+    max-width: 50%;
+    height: fit-content;
+    float: right;
+    left:0;
+    padding: 10px ;
 }
 
 .eventsItemUsers {
@@ -242,8 +243,18 @@ nav li:last-of-type a:active {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    overflow-x: hidden;
+    
 }
-
+.eventsItemUsers > div{
+    height: 100px ;
+    display: flex;
+    flex-wrap: wrap;
+    gap:20px;
+    align-items: center;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
 .eventsItemUsers > div:first-of-type {
     display: flex;
     gap: 1em
