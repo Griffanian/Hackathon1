@@ -127,6 +127,15 @@ nav li:last-of-type a:active {
     max-width: 1320px;
 }
 
+.promo > h2 {
+    text-align: center;
+    margin-bottom: 1em;
+    background: #57C7F8;
+    background: linear-gradient(30deg, #8A1A1A 0%, #57C7F8 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
 .promoItem {
     background: url("imgs/promo1.jpg") 50% 50% no-repeat;
     background-size: cover;
@@ -154,6 +163,10 @@ nav li:last-of-type a:active {
     padding: 2em;
     text-align: center;
     width: 100%;
+}
+
+.promoItemContent h4 a {
+    color: #C8E9F9;
 }
 
 .promoItemContent > * {
@@ -345,3 +358,175 @@ button[type="submit"] {
     margin-top: .5em;
 }
 
+.about {
+    background: #57C7F8;
+    background: linear-gradient(90deg, #8A1A1A 0%, #57C7F8 100%);
+    color: #fff;
+    padding: 4em;
+}
+
+.about > div > div {
+    background: url("imgs/ill.svg") 100% 50% no-repeat;
+    background-size: contain;
+    padding-right: 40%;
+}
+
+.about h1 {
+    font-size: 3em;
+    line-height: 115%;
+}
+
+.about p {
+    margin-top: 1em;
+}
+
+.about .btn {
+    border-radius: 20px;
+    font-size: 1.5em;
+    display: inline-block;
+    margin-top: .5em;
+    padding: .5em 1.5em;
+}
+
+.introduction {
+    margin: 4em 0;
+    text-align: center;
+}
+
+.introduction > div {
+    display: flex;
+    margin-top: 1em;
+    gap: 3em
+}
+
+.introduction > div > div {
+    background: url("imgs/i-exchange.svg") 50% 10% no-repeat;
+    background-size: 5em;
+    padding-top: 7em;
+    flex: 1;
+    margin-top: 1em;
+}
+
+.introduction > div > div:first-of-type {
+    background: url("imgs/i-practice.svg") 50% 0 no-repeat;
+    background-size: 6.5em;
+}
+
+.introduction > div > div:last-of-type {
+    background: url("imgs/i-community.svg") 50% 5% no-repeat;
+    background-size: 4.85em;
+}
+
+.introduction h3 {
+    margin: .5em 0 1em;
+}
+
+.eventsAndPeople {
+    margin-top: 4em;
+    display: flex;
+    gap: 2em;
+}
+
+.eventsAndPeople > div {
+    flex: 1;
+}
+
+.eventsAndPeopleEvent,
+.eventsAndPeoplePerson {
+    border: 2px solid #C8E9F9;
+    border-radius: 15px;
+    margin-top: 1em;
+    padding: 0 2em 0 0;
+    display: flex;
+    gap: 1em
+}
+
+.eventsAndPeopleEvent > div {
+    flex: 1;
+}
+
+.eventsAndPeopleEvent > div:first-of-type {
+    padding: 1em 0 1em 1em;
+}
+
+.eventsAndPeopleEvent > div:first-of-type div {
+    background: #5BBCE9;
+    color: #fff;
+    border-top-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    font-size: .85em;
+    position: absolute;
+    padding: .5em .75em;
+}
+
+.eventsAndPeopleEvent > div:last-of-type {
+    padding: 1em 0;
+}
+
+.eventsAndPeopleEvent h2,
+.eventsAndPeoplePerson h2 {
+    font-size: 1.15em;
+}
+
+.eventsAndPeopleEvent h4 {
+    color: #555;
+    margin-top: .25em;
+    font-size: 1em;
+}
+
+.eventsAndPeopleEvent h4 a {
+    color: #3F6DB1;
+}
+
+.eventsAndPeopleEvent p:not(:last-of-type) {
+    font-size: .85em;
+    margin: 1em 0 0;
+}
+
+.eventsAndPeopleEvent > div > p:last-of-type {
+    margin-top: 2em;
+}
+
+.eventsAndPeopleEvent img {
+   border-radius: 15px;
+   width: 100%;
+}
+
+.eventsAndPeoplePerson {
+    align-items: center;
+    justify-content: space-between;
+    padding-right: 1em;;
+}
+
+.eventsAndPeoplePerson > div {
+    display: flex;
+    align-items: center;
+    padding: 1em 0;
+    gap: 1em;
+}
+
+.eventsAndPeoplePerson h2 {
+    margin-bottom: .5em;
+}
+
+.eventsAndPeoplePerson img {
+    border-radius: 50%;
+    max-width: 100px;
+    margin-left: 1em
+}
+
+.eventsAndPeoplePerson p {
+    font-size: .85em;
+    margin-top: .25em;
+    padding-bottom: .25em;
+}
+
+.eventsAndPeoplePerson p:not(:last-of-type) {
+    border-bottom: 1px solid #C8E9F9;
+}
+
+.eventsAndPeoplePerson p b {
+    color: #3F6DB1;
+    display: inline-block;
+    width: 8em;
+}
