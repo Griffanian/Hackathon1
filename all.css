@@ -41,11 +41,12 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: 1.5em;
-    height: 100px;
+    height: fit-content;
 }
 
 header > div:last-of-type {
     display: flex;
+    flex-direction: row-reverse;
     align-items: center;
 }
 
@@ -277,6 +278,7 @@ nav li:last-of-type a:active {
     overflow-y: hidden;
 }
 .eventsItemUsers > div:first-of-type {
+    justify-content: center;
     display: flex;
     gap: 1em
 }
@@ -296,7 +298,16 @@ footer {
     align-items: center;
     padding: 2em;
 }
-
+footer div:first-of-type{
+    width: max-content;
+    display: flex;
+    flex-direction: row;
+}
+footer div:first-of-type nav{
+    width: max-content;
+    display: flex;
+    align-items: center;
+}
 footer .logoHolder svg {
     fill: #fff;
 }
@@ -304,7 +315,13 @@ footer .logoHolder svg {
 footer nav a {
     color: #fff;
 }
-
+footer div:last-of-type{
+    width: min-content;
+}
+footer div:last-of-type p{
+    width: 210px;
+    text-align: center;
+}
 .hidden {
     display: none;
 }
@@ -656,4 +673,123 @@ button[type="submit"] {
     background: url("imgs/banner.jpg") 50% 50% no-repeat;
     background-size: cover;
     height: 400px;
+}
+@media screen and (max-width:890px) {
+    header{
+        align-items:center;
+        justify-content: flex-start;
+        flex-direction: column;
+        padding: 0;
+        padding-top: 36px;
+        height: fit-content;
+    }
+    header div:last-of-type{
+        flex-direction: row-reverse;
+        align-items: flex-start;
+        width: 90vw;
+        cursor: pointer
+    }
+    .profileHolder{
+        display: flex;
+        align-items: flex-start;
+        width: 200px;
+        margin-right: 0;
+    }  
+   .profileHolder a{
+        width: 200px;
+        margin-left: 20px;
+    } 
+    .dropbtn {
+        display: block;
+        border: none;
+        width: 25px;
+        height: 5px;
+        background-color: #000;
+      }
+    .dropdown::before{
+      display: block;
+      width: 25px;
+      height: 5px;
+      background-color: black;
+      content: "";
+      border-bottom: 5px solid white;
+      border-top: 15px solid #fff;
+    }
+    
+    .dropdown::after{
+      display: block;
+      width: 25px;
+      height: 5px;
+      background-color: black;
+      content: "";
+      border-top: 5px solid white;
+    }
+    
+    .dropdown {
+      
+      position: relative;
+      display: inline-block;
+      cursor: pointer;
+      pointer-events: auto;
+    }
+    .dropdown:hover nav {display: block;}
+    .dropdown:hover {
+        justify-content: flex-start;
+        align-items: flex-start;
+        height: 150px;
+    }
+
+    .dropdown nav {
+        margin-top: 10px;
+        display: none;
+        position: absolute;
+        min-width: 225px;
+    }
+    .dropdown nav ul{
+        display: flex;
+        flex-direction: column;
+    }
+    .dropdown nav ul li{
+        display: flex;
+        align-items: center;
+        margin-top: 10px;
+    }
+
+}
+@media screen and (max-width:940px) {
+    footer, footer nav, footer nav ul{
+        display: flex;
+    }
+    footer{
+        height: fit-content;
+        align-items: center;
+        flex-direction: row;
+    }
+    footer div:last-of-type{
+        align-self: flex-end;
+    }
+    footer div:last-of-type p {
+        align-self: flex-start;
+    }
+    footer div nav ul{
+        flex-direction: column;
+        gap: 1em;
+        align-items:flex-start;
+    }
+    footer div nav ul li a:last-of-type{
+        display: flex;
+        margin-right: 0;
+    }
+    footer .logoHolder{
+        display: block;
+        padding-left: 22px;
+    }
+    footer div:first-of-type{
+        display: flex;
+        gap:0.5em;
+        flex-direction: column;
+        align-items: flex-start;
+
+    }
+
 }
