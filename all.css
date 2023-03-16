@@ -350,7 +350,7 @@ footer div:last-of-type p{
 }
 
 .modal {
-    position: absolute;
+    position: absolute; 
     width: 100vw;
     height: 100vh;
     background: rgba(0,0,0,.7);
@@ -503,6 +503,7 @@ button[type="submit"] {
     font-size: .85em;
     position: absolute;
     padding: .5em .75em;
+    /* width: 30%; */
 }
 
 .eventsAndPeopleEvent > div:last-of-type {
@@ -772,10 +773,25 @@ button[type="submit"] {
     background-size: cover;
     height: 400px;
 }
-@media screen and (max-width:1194px){
+@media screen and (max-width:1320px){
+    .holder, .person{
+        max-width: 90vw;
+        margin: auto;
+    }
+
+}
+@media screen and (max-width:1100px){
+
     .about > div > div{
         background: none;
         padding: 0;
+    }
+    .holder > div {
+        display:flex;
+        flex-direction:column
+    }
+    .eventsAndPeopleEvent > div:first-of-type > div{
+        width: 30%;
     }
 }
 @media screen and (max-width:1050px){
