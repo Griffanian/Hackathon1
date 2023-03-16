@@ -895,4 +895,32 @@ button[type="submit"] {
     .eventsAndPeoplePerson > div:last-of-type{
         padding-bottom: 10px;
     }
+    footer {
+        flex-direction: column;        
+    }
+    footer div:last-of-type{
+        align-self: center;
+        margin-top: 0.5em;
+    }
+    footer .logoHolder{
+        padding: 0;
+        width: 100%
+    }
+    /* footer > div:first-of-type{
+        border: 2px solid #fff;
+        border-radius: 15px;
+    } */
+    footer div nav ul{
+        align-items: center;
+        gap:0;
+    }
+    footer div nav ul li{
+        width: 100%;
+        border: 2px solid #fff;
+        border-radius: 15px;
+        margin-bottom: 0.5em;
+    }
+    footer div nav ul li:last-of-type{
+        border: none;
+    }
 }
