@@ -10,6 +10,26 @@ document.addEventListener("DOMContentLoaded", function() {
                 const modal = document.querySelector(".modal");
                 modal.classList.remove("hidden");
                 const modalType = event.target.classList;
+                if (modalType.contains("joinOpener")) {
+                    console.log(document.querySelector("h1").innerHTML)
+                    if (document.querySelector("h1").innerHTML=="Events") {
+                        document.querySelector(".modal .joinOpener p span").innerHTML = event.target.parentNode.parentNode.parentNode.parentNode.querySelector("h2 a").innerHTML;
+                    }
+                    else {
+                        document.querySelector(".modal .joinOpener p span").innerHTML = event.target.parentNode.parentNode.querySelector("h3").innerHTML;
+                    }
+                }
+                if (modalType.contains("connectOpener")) {
+                    if (document.querySelector("h1").innerHTML=="People") {
+                        document.querySelector(".modal .connectOpener p:first-of-type span").innerHTML = event.target.parentNode.parentNode.querySelector("h2").innerHTML;
+                    }
+                    else {
+                        document.querySelector(".modal .connectOpener p:first-of-type span").innerHTML = event.target.parentNode.parentNode.parentNode.querySelector("h2").innerHTML;
+                    }
+
+
+                    console.log(event.target.parentNode.parentNode.parentNode.querySelector("h2").innerHTML)
+                }
                 modal.querySelectorAll("article").forEach(e=>{
                     if(e.classList.contains(modalType[modalType.length-1])) {
                         e.classList.remove("hidden");
@@ -66,7 +86,6 @@ document.addEventListener("DOMContentLoaded", function() {
 //     Slider
 
     const slides = document.querySelectorAll(".promoItem");
-    console.log(slides.length)
     if (slides.length > 0) {
         let currIndex = 0;
         const slider = setInterval(()=>{
@@ -74,7 +93,6 @@ document.addEventListener("DOMContentLoaded", function() {
                 if (currIndex > slides.length - 1) {
                     currIndex = 0;
                 }
-                console.log("curr", currIndex)
                 document.querySelector(".promoItems").style.transform = `translateY(${-500*currIndex}px)`;
                 currIndex++;
             }, 500)
