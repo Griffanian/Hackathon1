@@ -780,7 +780,7 @@ button[type="submit"] {
     }
 
 }
-@media screen and (max-width:1194px){
+@media screen and (max-width:1100px){
 
     .about > div > div{
         background: none;
