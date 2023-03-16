@@ -309,6 +309,8 @@ nav li:last-of-type a:active {
     max-width: 100px;
 }
 
+
+
 footer {
     background: #57C7F8;
     background: linear-gradient(90deg, #8A1A1A 0%, #57C7F8 100%);
@@ -674,6 +676,72 @@ button[type="submit"] {
     background-image: url("imgs/i-hobby.svg");
 }
 
+.peopleItem {
+    margin-top: 2em;
+}
+
+.peopleItem.hidden {
+    display: none;
+}
+
+.peopleItem > div > div:last-of-type {
+    border-left: 2px solid #C8E9F9;
+    border-right: 2px solid #C8E9F9;
+    padding: .5em 2em;
+
+}
+
+.peopleItem > div:last-of-type {
+    flex-direction: column;
+    align-self: center;
+    padding-left: 1em;
+}
+
+.peopleItem > div:last-of-type a {
+    display: block;
+}
+
+.peopleItem img {
+    max-width: 150px;
+}
+
+.peopleItem h2 {
+    margin: 1em 0;
+}
+
+.peopleItem p {
+    margin-top: .5em;
+    padding-bottom: .5em;
+}
+
+.peopleFilter {
+    background: #5BBCE9;
+    color: #fff;
+    border-radius: 15px;
+    padding: 1em;
+    margin: 2em 0;
+}
+
+.peopleFilter a {
+    background: #fff;
+    border-radius: 15px;
+    color: #3F6DB1;
+    display: inline-block;
+    margin-left: 1em;
+    padding: .35em 1em;
+}
+
+.peopleFilter a:hover,
+.peopleFilter a:focus,
+.peopleFilter a:active {
+    opacity: .7;
+}
+
+.peopleFilter a.active {
+    background: #3F6DB1;
+    color: #fff;
+}
+
 .personEvents {
     background: #C8E9F9;
     margin-top: 4em;
@@ -823,7 +891,7 @@ button[type="submit"] {
         margin-bottom: 10px;
     }
     .dropdown nav ul li a{
-        margin: 0%;
+        margin: 0;
     }
 
     footer, footer nav, footer nav ul{
@@ -887,7 +955,7 @@ button[type="submit"] {
         width: 90vw;
     }
     .dropdown nav ul{
-        padding: none;
+        padding: 0;
         border: none;
         background-color: transparent;
     }
