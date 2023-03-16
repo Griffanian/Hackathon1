@@ -138,12 +138,30 @@ nav li:last-of-type a:active {
     -webkit-text-fill-color: transparent;
 }
 
+.promoItemsHolder {
+    overflow-y: hidden;
+    height: 500px;
+}
+
+.promoItems {
+    display: flex;
+    flex-direction: column;
+}
+
 .promoItem {
     background: url("imgs/promo1.jpg") 50% 50% no-repeat;
     background-size: cover;
     display: flex;
     align-items: center;
     height: 500px;
+}
+
+.promoItem:nth-of-type(2) {
+    background-image: url("imgs/Promo2.jpeg");
+}
+
+.promoItem:nth-of-type(3) {
+    background-image: url("imgs/Promo3.jpeg");
 }
 
 .promoItem h4 {
@@ -203,7 +221,7 @@ nav li:last-of-type a:active {
 .events h1,
 .people h1 {
     text-align: center;
-    font-size: 4em;
+    font-size: 3em;
 }
 
 .eventsItem {
@@ -247,6 +265,9 @@ nav li:last-of-type a:active {
     padding: 2em;
     padding-bottom: 1.5em;
 }
+
+.eventsItemDetails > div
+
 .eventsItemDetails > h4 {
     margin-left: 36px;
 }
@@ -331,7 +352,7 @@ footer nav a {
     padding: 2em
 }
 
-.modal div#close {
+.modal a#close {
     background: url("imgs/close.svg");
     display: block;
     cursor: pointer;
@@ -434,7 +455,8 @@ button[type="submit"] {
 }
 
 .eventsAndPeopleEvent,
-.eventsAndPeoplePerson {
+.eventsAndPeoplePerson,
+.peopleItem {
     border: 2px solid #C8E9F9;
     border-radius: 15px;
     margin-top: 1em;
@@ -443,7 +465,8 @@ button[type="submit"] {
     gap: 1em
 }
 
-.eventsAndPeopleEvent > div {
+.eventsAndPeopleEvent > div,
+.peopleItem > div > div:nth-of-type(2) {
     flex: 1;
 }
 
@@ -500,18 +523,21 @@ button[type="submit"] {
     padding-right: 1em;;
 }
 
-.eventsAndPeoplePerson > div {
+.eventsAndPeoplePerson > div,
+.peopleItem > div {
     display: flex;
     align-items: center;
     padding: 1em 0;
     gap: 1em;
 }
 
-.eventsAndPeoplePerson h2 {
+.eventsAndPeoplePerson h2,
+.peopleItem h2 {
     margin-bottom: .5em;
 }
 
-.eventsAndPeoplePerson img {
+.eventsAndPeoplePerson img,
+.peopleItem img {
     border-radius: 50%;
     max-width: 100px;
     margin-left: 1em
@@ -523,11 +549,13 @@ button[type="submit"] {
     padding-bottom: .25em;
 }
 
-.eventsAndPeoplePerson p:not(:last-of-type) {
+.eventsAndPeoplePerson p:not(:last-of-type),
+.peopleItem p:not(:last-of-type) {
     border-bottom: 1px solid #C8E9F9;
 }
 
-.eventsAndPeoplePerson p b {
+.eventsAndPeoplePerson p b,
+.peopleItem p b {
     color: #3F6DB1;
     display: inline-block;
     width: 8em;
@@ -656,4 +684,70 @@ button[type="submit"] {
     background: url("imgs/banner.jpg") 50% 50% no-repeat;
     background-size: cover;
     height: 400px;
+}
+
+.peopleItem {
+    margin-top: 2em;
+}
+
+.peopleItem.hidden {
+    display: none;
+}
+
+.peopleItem > div > div:last-of-type {
+    border-left: 2px solid #C8E9F9;
+    border-right: 2px solid #C8E9F9;
+    padding: .5em 2em;
+
+}
+
+.peopleItem > div:last-of-type {
+    flex-direction: column;
+    align-self: center;
+    padding-left: 1em;
+}
+
+.peopleItem > div:last-of-type a {
+    display: block;
+}
+
+.peopleItem img {
+    max-width: 150px;
+}
+
+.peopleItem h2 {
+    margin: 1em 0;
+}
+
+.peopleItem p {
+    margin-top: .5em;
+    padding-bottom: .5em;
+}
+
+.peopleFilter {
+    background: #5BBCE9;
+    color: #fff;
+    border-radius: 15px;
+    padding: 1em;
+    margin: 2em 0;
+}
+
+.peopleFilter a {
+    background: #fff;
+    border-radius: 15px;
+    color: #3F6DB1;
+    display: inline-block;
+    margin-left: 1em;
+    padding: .35em 1em;
+}
+
+.peopleFilter a:hover,
+.peopleFilter a:focus,
+.peopleFilter a:active {
+    opacity: .7;
+}
+
+.peopleFilter a.active {
+    background: #3F6DB1;
+    color: #fff;
 }
