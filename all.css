@@ -131,7 +131,7 @@ nav li:last-of-type a:active {
 
 .holder {
     margin: 0 auto;
-    max-width: 90vw;
+    max-width: 1320px;
 }
 
 .promo > h2 {
@@ -143,12 +143,30 @@ nav li:last-of-type a:active {
     -webkit-text-fill-color: transparent;
 }
 
+.promoItemsHolder {
+    overflow-y: hidden;
+    height: 500px;
+}
+
+.promoItems {
+    display: flex;
+    flex-direction: column;
+}
+
 .promoItem {
     background: url("imgs/promo1.jpg") 50% 50% no-repeat;
     background-size: cover;
     display: flex;
     align-items: center;
     height: 500px;
+}
+
+.promoItem:nth-of-type(2) {
+    background-image: url("imgs/Promo2.jpeg");
+}
+
+.promoItem:nth-of-type(3) {
+    background-image: url("imgs/Promo3.jpeg");
 }
 
 .promoItem h4 {
@@ -208,7 +226,7 @@ nav li:last-of-type a:active {
 .events h1,
 .people h1 {
     text-align: center;
-    font-size: 4em;
+    font-size: 3em;
 }
 
 .eventsItem {
@@ -282,7 +300,6 @@ nav li:last-of-type a:active {
     overflow-y: hidden;
 }
 .eventsItemUsers > div:first-of-type {
-    justify-content: center;
     display: flex;
     gap: 1em
 }
@@ -352,7 +369,7 @@ footer div:last-of-type p{
     padding: 2em
 }
 
-.modal div#close {
+.modal a#close {
     background: url("imgs/close.svg");
     display: block;
     cursor: pointer;
@@ -457,7 +474,8 @@ button[type="submit"] {
     width: 12%;
 }
 .eventsAndPeopleEvent,
-.eventsAndPeoplePerson {
+.eventsAndPeoplePerson,
+.peopleItem {
     border: 2px solid #C8E9F9;
     border-radius: 15px;
     margin-top: 1em;
@@ -466,7 +484,8 @@ button[type="submit"] {
     gap: 1em
 }
 
-.eventsAndPeopleEvent > div {
+.eventsAndPeopleEvent > div,
+.peopleItem > div > div:nth-of-type(2) {
     flex: 1;
 }
 
@@ -523,18 +542,21 @@ button[type="submit"] {
     padding-right: 1em;;
 }
 
-.eventsAndPeoplePerson > div {
+.eventsAndPeoplePerson > div,
+.peopleItem > div {
     display: flex;
     align-items: center;
     padding: 1em 0;
     gap: 1em;
 }
 
-.eventsAndPeoplePerson h2 {
+.eventsAndPeoplePerson h2,
+.peopleItem h2 {
     margin-bottom: .5em;
 }
 
-.eventsAndPeoplePerson img {
+.eventsAndPeoplePerson img,
+.peopleItem img {
     border-radius: 50%;
     max-width: 100px;
     margin-left: 1em
@@ -546,11 +568,13 @@ button[type="submit"] {
     padding-bottom: .25em;
 }
 
-.eventsAndPeoplePerson p:not(:last-of-type) {
+.eventsAndPeoplePerson p:not(:last-of-type),
+.peopleItem p:not(:last-of-type) {
     border-bottom: 1px solid #C8E9F9;
 }
 
-.eventsAndPeoplePerson p b {
+.eventsAndPeoplePerson p b,
+.peopleItem p b {
     color: #3F6DB1;
     display: inline-block;
     width: 8em;
@@ -722,11 +746,11 @@ button[type="submit"] {
         width: 200px;
         margin-right: 0;
         margin-bottom:10px ;
-    }  
+    }
     header .profileHolder a{
         width: 200px;
         margin-left: 20px;
-    } 
+    }
     header > div:last-of-type{
         width: 90vw;
         display: flex;
@@ -738,7 +762,7 @@ button[type="submit"] {
         width: 25px;
         height: 5px;
         background-color: #000;
-        
+
       }
     .dropdown::before{
       display: block;
@@ -749,7 +773,7 @@ button[type="submit"] {
       border-bottom: 5px solid white;
       border-top: 15px solid #fff;
     }
-    
+
     .dropdown::after{
       display: block;
       width: 25px;
@@ -758,7 +782,7 @@ button[type="submit"] {
       content: "";
       border-top: 5px solid white;
     }
-    
+
     .dropdown {
       z-index: 1;
       position: absolute;
@@ -786,7 +810,7 @@ button[type="submit"] {
         padding: 10px;
         border: 2px solid #5BBCE9;
         border-radius: 15px;
-        background-color: #fff;    
+        background-color: #fff;
     }
     .dropdown nav ul li{
         display: flex;
@@ -835,7 +859,7 @@ button[type="submit"] {
         display: flex;
         flex-direction: column;
     }
-}   
+}
 @media screen and (max-width:764px) {
     header > div:last-of-type{
         flex-direction: row-reverse;
@@ -879,7 +903,7 @@ button[type="submit"] {
     }
 
     .dropdown nav ul li a{
-        width: 100%; 
+        width: 100%;
     }
     .dropdown:hover {
         height: 210px;
