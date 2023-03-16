@@ -704,6 +704,11 @@ button[type="submit"] {
     background-size: cover;
     height: 400px;
 }
+@media screen and (max-width:1320px){
+    .holder{
+        max-width: 90vw;
+    }
+}
 @media screen and (max-width:1194px){
     .about > div > div{
         background: none;
