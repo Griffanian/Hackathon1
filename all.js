@@ -5,6 +5,14 @@ document.addEventListener("DOMContentLoaded", function() {
     const modalOpeners = document.querySelectorAll(".modalOpener");
 
     if (modalOpeners.length > 0) {
+
+        const buttons = document.querySelectorAll(".modal button[type='submit']");
+        buttons.forEach(e=>{
+            e.addEventListener("click", (event)=>{
+                document.querySelector(".modal").classList.add("hidden");
+            })
+        })
+
         modalOpeners.forEach(e=>{
             e.addEventListener("click", (event)=>{
                 const modal = document.querySelector(".modal");
