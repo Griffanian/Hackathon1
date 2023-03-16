@@ -41,11 +41,16 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: 1.5em;
-    height: 100px;
+    margin-left: 5vw;
+    margin-right:5vw;
+    padding-left: 0;
+    padding-right: 0;
+    height: fit-content;
 }
 
 header > div:last-of-type {
     display: flex;
+    flex-direction: row-reverse;
     align-items: center;
 }
 
@@ -265,9 +270,6 @@ nav li:last-of-type a:active {
     padding: 2em;
     padding-bottom: 1.5em;
 }
-
-.eventsItemDetails > div
-
 .eventsItemDetails > h4 {
     margin-left: 36px;
 }
@@ -317,7 +319,16 @@ footer {
     align-items: center;
     padding: 2em;
 }
-
+footer div:first-of-type{
+    width: max-content;
+    display: flex;
+    flex-direction: row;
+}
+footer div:first-of-type nav{
+    width: max-content;
+    display: flex;
+    align-items: center;
+}
 footer .logoHolder svg {
     fill: #fff;
 }
@@ -325,7 +336,13 @@ footer .logoHolder svg {
 footer nav a {
     color: #fff;
 }
-
+footer div:last-of-type{
+    width: min-content;
+}
+footer div:last-of-type p{
+    width: 210px;
+    text-align: center;
+}
 .hidden {
     display: none;
 }
@@ -453,7 +470,9 @@ button[type="submit"] {
 .eventsAndPeople > div {
     flex: 1;
 }
-
+.eventsAndPeopleEvent div div{
+    width: 12%;
+}
 .eventsAndPeopleEvent,
 .eventsAndPeoplePerson,
 .peopleItem {
@@ -685,69 +704,219 @@ button[type="submit"] {
     background-size: cover;
     height: 400px;
 }
-
-.peopleItem {
-    margin-top: 2em;
+@media screen and (max-width:1194px){
+    .about > div > div{
+        background: none;
+        padding: 0;
+    }
+}
+@media screen and (max-width:1050px){
+    .eventsAndPeople{
+        display: flex;
+        flex-direction: column;
+    }
+    .eventsAndPeopleEvent div div{
+        width: 30%;
+    }
 }
 
-.peopleItem.hidden {
-    display: none;
+@media screen and (max-width:940px) {
+    header{
+        align-items:center;
+        justify-content: flex-start;
+        flex-direction: column;
+        padding: 0;
+        padding-top: 10px;
+        height: fit-content;
+    }
+    header > div:last-of-type > .profileHolder{
+        align-self: flex-end;
+    }
+    header .logoHolder{
+        margin-top: 10px;
+        z-index: 1;
+        position: absolute;
+        display: flex;
+        justify-self: center;
+    }
+    header .profileHolder{
+        display: grid;
+        align-items: flex-start;
+        align-self: flex-start;
+        width: 200px;
+        margin-right: 0;
+        margin-bottom:10px ;
+    }
+    header .profileHolder a{
+        width: 200px;
+        margin-left: 20px;
+    }
+    header > div:last-of-type{
+        width: 90vw;
+        display: flex;
+        flex-direction: column;
+    }
+    .dropbtn {
+        display: block;
+        border: none;
+        width: 25px;
+        height: 5px;
+        background-color: #000;
+
+      }
+    .dropdown::before{
+      display: block;
+      width: 25px;
+      height: 5px;
+      background-color: black;
+      content: "";
+      border-bottom: 5px solid white;
+      border-top: 15px solid #fff;
+    }
+
+    .dropdown::after{
+      display: block;
+      width: 25px;
+      height: 5px;
+      background-color: black;
+      content: "";
+      border-top: 5px solid white;
+    }
+
+    .dropdown {
+      z-index: 1;
+      position: absolute;
+      display: inline-block;
+      cursor: pointer;
+      pointer-events: auto;
+      width: 30px;
+      align-self:flex-start;
+    }
+    .dropdown:hover nav {display: block;}
+    .dropdown:hover {
+        justify-content: flex-start;
+        align-items: flex-start;
+    }
+
+    .dropdown nav {
+        margin-top: 10px;
+        display: none;
+        position: absolute;
+        width: 220px;
+    }
+    .dropdown nav ul{
+        display: flex;
+        flex-direction: column;
+        padding: 10px;
+        border: 2px solid #5BBCE9;
+        border-radius: 15px;
+        background-color: #fff;
+    }
+    .dropdown nav ul li{
+        display: flex;
+        align-items: center;
+        margin-bottom: 10px;
+    }
+    .dropdown nav ul li a{
+        margin: 0%;
+    }
+
+    footer, footer nav, footer nav ul{
+        display: flex;
+    }
+    footer{
+        height: fit-content;
+        align-items: center;
+        flex-direction: row;
+    }
+    footer div:last-of-type{
+        align-self: flex-end;
+    }
+    footer div:last-of-type p {
+        align-self: flex-start;
+    }
+    footer div nav ul{
+        flex-direction: column;
+        gap: 1em;
+        align-items:flex-start;
+    }
+    footer div nav ul li a:last-of-type{
+        display: flex;
+        margin-right: 0;
+    }
+    footer .logoHolder{
+        display: block;
+        padding-left: 22px;
+    }
+    footer div:first-of-type{
+        display: flex;
+        gap:0.5em;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .introduction > div{
+        display: flex;
+        flex-direction: column;
+    }
 }
+@media screen and (max-width:764px) {
+    header > div:last-of-type{
+        flex-direction: row-reverse;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+    header > .logoHolder{
+        position: relative;
+    }
+    header > div:last-of-type > .profileHolder{
+        align-self: flex-start;
+    }
+    .dropdown{
+        height:20px ;
+        z-index: unset;
+        position: relative;
+    }
+    .dropdown nav {
+        margin-top: 10px;
+        width: 90vw;
+    }
+    .dropdown nav ul{
+        padding: none;
+        border: none;
+        background-color: transparent;
+    }
+    .dropdown nav ul li{
+        width: inherit;
+        margin-bottom: 10px;
+        border: 2px solid #5BBCE9;
+        border-radius: 15px;
+    }
 
-.peopleItem > div > div:last-of-type {
-    border-left: 2px solid #C8E9F9;
-    border-right: 2px solid #C8E9F9;
-    padding: .5em 2em;
+    .dropdown nav ul li:first-of-type{
+        margin-top: 10px;
+    }
 
-}
+    .dropdown nav ul li:last-of-type{
+        border: none;
+        width: auto;
+    }
 
-.peopleItem > div:last-of-type {
-    flex-direction: column;
-    align-self: center;
-    padding-left: 1em;
-}
-
-.peopleItem > div:last-of-type a {
-    display: block;
-}
-
-.peopleItem img {
-    max-width: 150px;
-}
-
-.peopleItem h2 {
-    margin: 1em 0;
-}
-
-.peopleItem p {
-    margin-top: .5em;
-    padding-bottom: .5em;
-}
-
-.peopleFilter {
-    background: #5BBCE9;
-    color: #fff;
-    border-radius: 15px;
-    padding: 1em;
-    margin: 2em 0;
-}
-
-.peopleFilter a {
-    background: #fff;
-    border-radius: 15px;
-    color: #3F6DB1;
-    display: inline-block;
-    margin-left: 1em;
-    padding: .35em 1em;
-}
-
-.peopleFilter a:hover,
-.peopleFilter a:focus,
-.peopleFilter a:active {
-    opacity: .7;
-}
-
-.peopleFilter a.active {
-    background: #3F6DB1;
-    color: #fff;
+    .dropdown nav ul li a{
+        width: 100%;
+    }
+    .dropdown:hover {
+        height: 210px;
+    }
+    .eventsAndPeoplePerson{
+        flex-direction: column;
+        gap: unset;
+    }
+    .eventsAndPeoplePerson > div{
+        padding: 0;
+        padding-top: 10px;
+    }
+    .eventsAndPeoplePerson > div:last-of-type{
+        padding-bottom: 10px;
+    }
 }
