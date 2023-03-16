@@ -276,7 +276,8 @@ nav li:last-of-type a:active {
 }
 .eventsItemDetails img{
     max-width: 50%;
-    height: fit-content;
+    width: auto;
+    height: auto;
     float: right;
     left:0;
     padding: 10px ;
@@ -356,6 +357,7 @@ footer div:last-of-type p{
     height: 100vh;
     background: rgba(0,0,0,.7);
     top: 0;
+    z-index: 2;
 }
 
 .modal p {
@@ -630,7 +632,9 @@ button[type="submit"] {
     margin-right: 2em;
 }
 
-.person li p::before {
+.person li p::before,
+.eventsAndPeoplePerson p::before,
+.peopleItem div div:last-of-type p::before {
     content: "";
     height: 1.25em;
     width: 1.25em;
@@ -640,11 +644,15 @@ button[type="submit"] {
     margin: 0 .25em -.25em 0;
 }
 
-.person li:nth-of-type(2) p::before {
+.person li:nth-of-type(2) p::before,
+.eventsAndPeoplePerson p:nth-of-type(2)::before,
+.peopleItem div div:last-of-type p:nth-of-type(2)::before {
     background-image: url("imgs/i-map.svg");
 }
 
-.person li:nth-of-type(3) p::before {
+.person li:nth-of-type(3) p::before,
+.eventsAndPeoplePerson p:nth-of-type(3)::before,
+.peopleItem div div:last-of-type p:nth-of-type(3)::before {
     background-image: url("imgs/i-hobby.svg");
 }
 
