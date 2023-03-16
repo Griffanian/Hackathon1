@@ -41,6 +41,10 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: 1.5em;
+    margin-left: 5vw;
+    margin-right:5vw;
+    padding-left: 0;
+    padding-right: 0;
     height: fit-content;
 }
 
@@ -127,7 +131,7 @@ nav li:last-of-type a:active {
 
 .holder {
     margin: 0 auto;
-    max-width: 1320px;
+    max-width: 90vw;
 }
 
 .promo > h2 {
@@ -449,7 +453,9 @@ button[type="submit"] {
 .eventsAndPeople > div {
     flex: 1;
 }
-
+.eventsAndPeopleEvent div div{
+    width: 12%;
+}
 .eventsAndPeopleEvent,
 .eventsAndPeoplePerson {
     border: 2px solid #C8E9F9;
@@ -674,37 +680,65 @@ button[type="submit"] {
     background-size: cover;
     height: 400px;
 }
-@media screen and (max-width:890px) {
+@media screen and (max-width:1194px){
+    .about > div > div{
+        background: none;
+        padding: 0;
+    }
+}
+@media screen and (max-width:1050px){
+    .eventsAndPeople{
+        display: flex;
+        flex-direction: column;
+    }
+    .eventsAndPeopleEvent div div{
+        width: 30%;
+    }
+}
+
+@media screen and (max-width:940px) {
     header{
         align-items:center;
         justify-content: flex-start;
         flex-direction: column;
         padding: 0;
-        padding-top: 36px;
+        padding-top: 10px;
         height: fit-content;
     }
-    header div:last-of-type{
-        flex-direction: row-reverse;
-        align-items: flex-start;
-        width: 90vw;
-        cursor: pointer
+    header > div:last-of-type > .profileHolder{
+        align-self: flex-end;
     }
-    .profileHolder{
+    header .logoHolder{
+        margin-top: 10px;
+        z-index: 1;
+        position: absolute;
         display: flex;
+        justify-self: center;
+    }
+    header .profileHolder{
+        display: grid;
         align-items: flex-start;
+        align-self: flex-start;
         width: 200px;
         margin-right: 0;
+        margin-bottom:10px ;
     }  
-   .profileHolder a{
+    header .profileHolder a{
         width: 200px;
         margin-left: 20px;
     } 
+    header > div:last-of-type{
+        width: 90vw;
+        display: flex;
+        flex-direction: column;
+    }
     .dropbtn {
         display: block;
         border: none;
         width: 25px;
         height: 5px;
         background-color: #000;
+        
       }
     .dropdown::before{
       display: block;
@@ -726,37 +760,43 @@ button[type="submit"] {
     }
     
     .dropdown {
-      
-      position: relative;
+      z-index: 1;
+      position: absolute;
       display: inline-block;
       cursor: pointer;
       pointer-events: auto;
+      width: 30px;
+      align-self:flex-start;
     }
     .dropdown:hover nav {display: block;}
     .dropdown:hover {
         justify-content: flex-start;
         align-items: flex-start;
-        height: 150px;
     }
 
     .dropdown nav {
         margin-top: 10px;
         display: none;
         position: absolute;
-        min-width: 225px;
+        width: 220px;
     }
     .dropdown nav ul{
         display: flex;
         flex-direction: column;
+        padding: 10px;
+        border: 2px solid #5BBCE9;
+        border-radius: 15px;
+        background-color: #fff;    
     }
     .dropdown nav ul li{
         display: flex;
         align-items: center;
-        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+    .dropdown nav ul li a{
+        margin: 0%;
     }
 
-}
-@media screen and (max-width:940px) {
     footer, footer nav, footer nav ul{
         display: flex;
     }
@@ -789,7 +829,70 @@ button[type="submit"] {
         gap:0.5em;
         flex-direction: column;
         align-items: flex-start;
-
     }
 
+    .introduction > div{
+        display: flex;
+        flex-direction: column;
+    }
+}   
+@media screen and (max-width:764px) {
+    header > div:last-of-type{
+        flex-direction: row-reverse;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+    header > .logoHolder{
+        position: relative;
+    }
+    header > div:last-of-type > .profileHolder{
+        align-self: flex-start;
+    }
+    .dropdown{
+        height:20px ;
+        z-index: unset;
+        position: relative;
+    }
+    .dropdown nav {
+        margin-top: 10px;
+        width: 90vw;
+    }
+    .dropdown nav ul{
+        padding: none;
+        border: none;
+        background-color: transparent;
+    }
+    .dropdown nav ul li{
+        width: inherit;
+        margin-bottom: 10px;
+        border: 2px solid #5BBCE9;
+        border-radius: 15px;
+    }
+
+    .dropdown nav ul li:first-of-type{
+        margin-top: 10px;
+    }
+
+    .dropdown nav ul li:last-of-type{
+        border: none;
+        width: auto;
+    }
+
+    .dropdown nav ul li a{
+        width: 100%; 
+    }
+    .dropdown:hover {
+        height: 210px;
+    }
+    .eventsAndPeoplePerson{
+        flex-direction: column;
+        gap: unset;
+    }
+    .eventsAndPeoplePerson > div{
+        padding: 0;
+        padding-top: 10px;
+    }
+    .eventsAndPeoplePerson > div:last-of-type{
+        padding-bottom: 10px;
+    }
 }
