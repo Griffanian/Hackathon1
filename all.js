@@ -24,7 +24,12 @@ document.addEventListener("DOMContentLoaded", function() {
                         document.querySelector(".modal .joinOpener p span").innerHTML = event.target.parentNode.parentNode.parentNode.parentNode.querySelector("h2 a").innerHTML;
                     }
                     else {
-                        document.querySelector(".modal .joinOpener p span").innerHTML = event.target.parentNode.parentNode.querySelector("h3").innerHTML;
+                        if (event.target.innerHTML=="Participate!") {
+                            document.querySelector(".modal .joinOpener p span").innerHTML = event.target.parentNode.parentNode.querySelector("h2").innerHTML;
+                        }
+                        else {
+                            document.querySelector(".modal .joinOpener p span").innerHTML = event.target.parentNode.parentNode.querySelector("h3").innerHTML;
+                        }
                     }
                 }
                 if (modalType.contains("connectOpener")) {
@@ -32,11 +37,15 @@ document.addEventListener("DOMContentLoaded", function() {
                         document.querySelector(".modal .connectOpener p:first-of-type span").innerHTML = event.target.parentNode.parentNode.querySelector("h2").innerHTML;
                     }
                     else {
-                        document.querySelector(".modal .connectOpener p:first-of-type span").innerHTML = event.target.parentNode.parentNode.parentNode.querySelector("h2").innerHTML;
+                        if (document.querySelectorAll(".personEvents").length > 0) {
+                            document.querySelector(".modal .connectOpener p:first-of-type span").innerHTML = event.target.parentNode.parentNode.querySelector("h1").innerHTML;
+
+                        }
+                        else {
+                            document.querySelector(".modal .connectOpener p:first-of-type span").innerHTML = event.target.parentNode.parentNode.parentNode.querySelector("h2").innerHTML;
+                        }
+
                     }
-
-
-                    console.log(event.target.parentNode.parentNode.parentNode.querySelector("h2").innerHTML)
                 }
                 modal.querySelectorAll("article").forEach(e=>{
                     if(e.classList.contains(modalType[modalType.length-1])) {
