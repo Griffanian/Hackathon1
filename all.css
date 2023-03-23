@@ -490,7 +490,6 @@ button[type="submit"] {
 .peopleItem > div > div:nth-of-type(2) {
     flex: 1;
 }
-
 .eventsAndPeopleEvent > div:first-of-type {
     padding: 1em 0 1em 1em;
 }
@@ -802,6 +801,40 @@ button[type="submit"] {
     .eventsAndPeopleEvent div div{
         width: 30%;
     }
+    .peopleItem{
+        flex-direction: column;
+    }
+    .peopleItem > div{
+        flex-direction: column;
+    }
+    .peopleItem > div:first-of-type{
+        padding-bottom: 0;
+    }
+    .peopleItem > div:last-of-type{
+        padding-top: 0;
+        padding-left: 0;
+        margin-left:40px;
+        width: calc(100% - 40px);
+    }
+    .peopleItem > div:last-of-type > a{
+        width:100%;
+    }
+    .peopleItem > div div:first-of-type{
+        align-self: flex-start;
+        margin-left: 40px;
+        margin-top: 40px;
+    }
+    .peopleItem > div > div:nth-of-type(2){
+        margin-top:40px;
+    }
+    .peopleItem > div > div:nth-of-type(2) > p{
+        margin-left: 40px;
+    }
+    .peopleItem > div > div:last-of-type{
+        order:-1;
+        align-self: flex-end;
+        position: absolute;
+    }
 }
 
 @media screen and (max-width:940px) {
@@ -943,6 +976,8 @@ button[type="submit"] {
         display: flex;
         flex-direction: column;
     }
+
+
 }
 @media screen and (max-width:764px) {
     header > div:last-of-type{
@@ -1030,5 +1065,33 @@ button[type="submit"] {
     }
     footer div nav ul li:last-of-type{
         border: none;
+    }
+    .peopleItem > div > div:first-of-type {
+        align-self: center;
+        order:-2;
+        margin:0;
+    }
+
+    .peopleItem > div > div:last-of-type {
+        position: relative;
+        align-self: center;
+        width: calc(100% - 40px);
+        border: none;
+        justify-content: center;
+        padding:0;
+    }
+    .peopleItem > div > div:last-of-type > h2{
+        width: max-content;
+        margin:auto;
+    }
+    .peopleItem > div > div:last-of-type > div{
+        width: max-content;
+        margin:auto;
+    }
+    .peopleItem > div > div:last-of-type > div > p{
+        width: max-content;
+    }
+    .peopleItem > div > div:nth-of-type(2){
+        margin-top:0;
     }
 }
